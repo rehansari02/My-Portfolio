@@ -1,12 +1,50 @@
-# React + Vite
+# 🚀 My Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio built with **React.js**, **Tailwind CSS**, and smooth animations. This project showcases my skills, projects, and journey as a web developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React.js, Tailwind CSS, Framer Motion, React Icons
+- **Form Handling:** EmailJS
+- **Routing:** React Router
+- **Deployment:**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🔥 Features
+
+- 🔹 Responsive Design for all devices
+- 🔹 Smooth Animations using Framer Motion
+- 🔹 Contact Form with Email functionality using EmailJS
+- 🔹 Skills, Projects, and Education timeline
+- 🔹 Dark-themed UI with modern gradients
+
+---
+
+## 📁 Folder Structure
+
+src/
+│
+├── assets/ # Images & icons
+├── components/ # All reusable UI components , # Main sections: About, Projects, Contact
+├── App.jsx # Main App
+├── main.jsx # Entry point
+├── index.css # Tailwind + custom CSS
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the root and add your EmailJS keys like this:
+
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+
+Use them like this in code:
+
+```js
+import.meta.env.VITE_EMAILJS_SERVICE_ID;
+```
