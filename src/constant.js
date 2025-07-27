@@ -22,6 +22,7 @@ import UCC from "./assets/Education logo/Udhna.png";
 // Project
 import Sundown from "./assets/Work/Sundown.png";
 import Hotel from "./assets/Work/Airbnb.png";
+import Book from "./assets/Work/book-management.png";
 
 export const SkillsInfo = [
   {
@@ -117,5 +118,25 @@ export const projects = [
     ],
     github: "https://github.com/rehansari02/airbnb-final-ar.git",
     webapp: "https://airbnb-final-ar-1-clones.onrender.com/listings",
+  },
+  {
+    id: 2,
+    title: "BookShelf - Book Management App",
+    description:
+      "BookShelf is a full-stack MERN application that helps users manage a collection of books with ease. Users can add new books with details like title, author, publisher, and price, update existing records, delete entries, and view the complete book list. Built using MongoDB, Express.js, React.js, and Node.js, the app features clean routing, RESTful APIs, and form validation for real-time interactions. Axios is used for API communication and the app is styled with responsive design principles.",
+    image: Book,
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Axios",
+      "RESTful API",
+      "Mongoose",
+      "CRUD",
+      "JavaScript",
+    ],
+    github: "https://github.com/rehansari02/book-management.git",
+    webapp: "https://book-management-61re.vercel.app/",
   },
 ];
