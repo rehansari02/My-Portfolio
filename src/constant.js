@@ -23,6 +23,7 @@ import UCC from "./assets/Education logo/Udhna.png";
 import Sundown from "./assets/Work/Sundown.png";
 import Hotel from "./assets/Work/Airbnb.png";
 import Book from "./assets/Work/book-management.png";
+import obys from "./assets/Work/obysss.png";
 
 export const SkillsInfo = [
   {
@@ -138,5 +139,15 @@ export const projects = [
     ],
     github: "https://github.com/rehansari02/book-management.git",
     webapp: "https://book-management-61re.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Obys Agency",
+    description:
+      "This project is a clone of Obys Agency website built with HTML, CSS, JavaScript, and GSAP. It showcases advanced frontend animations and transitions, inspired by modern creative portfolio websites.",
+    image: obys,
+    tags: ["HTML", "CSS", "JavaScript", "GSAP"],
+    github: "https://github.com/rehansari02/Obys-Agency.git",
+    webapp: "https://obys-agency-clone-ar.netlify.app/",
   },
 ];
