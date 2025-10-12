@@ -35,19 +35,20 @@ const Education = () => {
 
             {/* Content Card */}
             <div
-              className={` mt-20 sm:mt-0 w-full sm:max-w-md p-4 sm:p-8 rounded-2xl  border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
+              className={` mt-20 sm:mt-0 w-full sm:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
                 index % 2 === 0 ? "sm:ml-16" : "sm:mr-16"
               } transform transition-transform duration-300 hover:scale-105`}
             >
               {/* Inside Card Content */}
               <div className="flex items-center space-x-6">
-                <div className="w-24 h-16 bg-white rounded-md overflow-hidden">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-purple-400 shadow-md flex-shrink-0">
                   <img
                     src={edu.img}
                     alt={edu.school}
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
+
                 <div className="flex flex-col justify-between">
                   <div>
                     <h3 className="text-xl font-semibold text-white">
@@ -58,6 +59,7 @@ const Education = () => {
                   <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
                 </div>
               </div>
+
               <p className="mt-4 text-gray-400 font-bold">Grade: {edu.grade}</p>
               <p className="mt-4 text-gray-400">{edu.desc}</p>
             </div>
