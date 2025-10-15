@@ -20,7 +20,7 @@ const About = () => {
       className="py-12 px-6 sm:px-10 md:px-16 lg:px-32 font-sans bg-black text-white"
     >
       <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-20">
-        {/* Left Side */}
+        {/* -------- LEFT SIDE -------- */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight">
             Hi, I am
@@ -55,7 +55,6 @@ const About = () => {
             opportunities in the tech industry.
           </p>
 
-          {/* Resume Button */}
           <a
             href="https://drive.google.com/file/d/175UCvWFUORJGWpvANnLVGboQx4eHqw3y/view?usp=drive_link"
             target="_blank"
@@ -70,17 +69,22 @@ const About = () => {
           </a>
         </div>
 
-        {/* Right Side */}
+        {/* -------- RIGHT SIDE (IMAGE) -------- */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           {isMobile ? (
             <img
               src={profileImage}
               alt="Rehan"
-              className="w-48 h-48 sm:w-64 sm:h-64 md:w-[24rem] md:h-[24rem] border-4 border-purple-700 rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              className="w-56 h-56 sm:w-64 sm:h-64 md:w-[24rem] md:h-[24rem] 
+              border-4 border-purple-700 rounded-full 
+              object-cover object-[center_25%]
+              drop-shadow-[0_10px_25px_rgba(130,69,236,0.6)] 
+              transition-all duration-300 ease-in-out"
             />
           ) : (
             <Tilt
-              className="w-48 h-48 sm:w-64 sm:h-64 md:w-[24rem] md:h-[24rem] border-4 border-purple-700 rounded-full"
+              className="w-56 h-56 sm:w-64 sm:h-64 md:w-[24rem] md:h-[24rem] 
+              border-4 border-purple-700 rounded-full overflow-hidden"
               tiltMaxAngleX={20}
               tiltMaxAngleY={20}
               perspective={1000}
@@ -91,7 +95,9 @@ const About = () => {
               <img
                 src={profileImage}
                 alt="Rehan"
-                className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+                className="w-full h-full rounded-full object-cover object-[center_25%]
+                drop-shadow-[0_10px_25px_rgba(130,69,236,0.6)]
+                transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </Tilt>
           )}
