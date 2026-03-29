@@ -24,6 +24,7 @@ import Sundown from "./assets/Work/Sundown.png";
 import Hotel from "./assets/Work/Airbnb.png";
 import Book from "./assets/Work/book-management.png";
 import obys from "./assets/Work/obysss.png";
+import uber from "./assets/Work/Uber-Clone.png";
 
 export const SkillsInfo = [
   {
@@ -150,4 +151,23 @@ export const projects = [
     github: "https://github.com/rehansari02/Obys-Agency.git",
     webapp: "https://obys-agency-clone-ar.netlify.app/",
   },
+  {
+    id: 4,
+    title: "Uber Clone",
+    description:
+      "A full-stack ride-booking web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to book rides with real-time pickup and destination selection, fare estimation, and secure authentication. The application also includes payment integration for seamless transactions and a powerful admin panel to manage users, rides, and system operations. Designed with a responsive and user-friendly interface, this project demonstrates end-to-end full-stack development and real-world application architecture.",
+    image: uber,
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Payment Integration",
+      "Admin Panel",
+      "REST API",
+    ],
+    github: "",
+    webapp: "https://uber-clone-ur.vercel.app/",
+  }
 ];
