@@ -110,9 +110,9 @@ A visually stunning frontend clone focusing on high-end animations.
 
 Let's build something amazing together!
 
-- **LinkedIn**: [Rehan Ansari](https://www.linkedin.com/in/rehan-ansari-dev/) *(Placeholder - Update with your actual link)*
+- **LinkedIn**: [Rehan Ansari](https://www.linkedin.com/in/rehan-ansari-5a49b1316)
 - **GitHub**: [@rehansari02](https://github.com/rehansari02)
-- **Portfolio**: [Live View](https://myportfolio-rehan.vercel.app/) *(Placeholder - Update with your actual link)*
+- **Portfolio**: [Live View](https://ansarirehan02.vercel.app/)
 
 ---
 
