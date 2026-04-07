@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import Skill from "./Components/Skills/Skill";
+import Experience from "./Components/Experience/Experience";
 import Work from "./Components/Work/Work";
 import Education from "./Components/Education/Education";
 import Contact from "./Components/Contact/Contact";
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <About />
         <Skill />
+        <Experience />
         <Work />
         <Education />
         <Contact />

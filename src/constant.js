@@ -171,3 +171,16 @@ export const projects = [
     webapp: "https://uber-clone-ur.vercel.app/",
   }
 ];
+
+export const experiences = [
+  {
+    id: 0,
+    role: "MERN Stack Developer Internship",
+    company: "Wizcoder",
+    logo: "https://media.wizcoder.com/wp-content/uploads/2025/04/white-logo.svg?compress=true&quality=80&w=640&dpr=1.3",
+    date: "Nov 2025 - Present",
+    description:
+      "Working as a MERN Stack Developer Intern, building responsive, modern web applications. Collaborating with the team to translate designs into functional, high-performance websites using React.js, Tailwind CSS, Node.js, and MongoDB.",
+    skills: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
+  }
+];
