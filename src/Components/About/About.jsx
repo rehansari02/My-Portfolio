@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
-import profileImage from "../../assets/profile_picture.jpg";
+import profileImage from "../../assets/profiles.jpeg";
 
 const About = () => {
   const [isMobile, setIsMobile] = useState(false);
