@@ -26,6 +26,9 @@ import Book from "./assets/Work/book-management.png";
 import obys from "./assets/Work/obysss.png";
 import uber from "./assets/Work/Uber-Clone.png";
 
+// comapny
+import Prithon from "./assets/company/prithon.png"
+
 export const SkillsInfo = [
   {
     title: "Frontend",
@@ -178,9 +181,40 @@ export const experiences = [
     role: "MERN Stack Developer Internship",
     company: "Wizcoder",
     logo: "https://media.wizcoder.com/wp-content/uploads/2025/04/white-logo.svg?compress=true&quality=80&w=640&dpr=1.3",
-    date: "Nov 2025 - Present",
+    date: "Nov 2025 - Apr 2026",
     description:
-      "Working as a MERN Stack Developer Intern, building responsive, modern web applications. Collaborating with the team to translate designs into functional, high-performance websites using React.js, Tailwind CSS, Node.js, and MongoDB.",
-    skills: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
+      "Worked as a MERN Stack Developer Intern, building responsive and modern web applications. Collaborated with the development team to create scalable, high-performance applications using React.js, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS.",
+    skills: [
+      "MongoDB",
+      "Supabase",
+      "Express.js",
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Tailwind CSS"
+    ],
+  },
+  {
+    id: 1,
+    role: "Full Stack Developer",
+    company: "Prithon Tech",
+    logo:Prithon,
+    date: "Apr 2026 - Present",
+    description:
+      "Working as a Full Stack Developer, developing scalable web applications and REST APIs. Building responsive user interfaces, implementing secure backend services, integrating databases, and collaborating with cross-functional teams to deliver high-quality software solutions.",
+    skills: [
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "PostgreSQL",
+      "Prisma",
+      "Supabase",
+      "Redux Toolkit",
+    ],
   }
 ];
