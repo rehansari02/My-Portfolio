@@ -1,102 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { SkillsInfo } from "../../constant";
-import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 
 const Skills = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect mobile screen width
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <section
-      id="skills"
-      className="py-24 px-[5vw] md:px-[7vw] lg:px-[10vw] font-sans bg-skills-gradient clip-path-custom bg-black"
-    >
-      {/* Section Title */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-        <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          A collection of my technical skills and expertise honed through
-          various projects and experiences
-        </p>
-      </div>
+    <section id="skills" className="section-shell">
+      <div className="section-container">
+        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.6 }} className="mx-auto max-w-3xl text-center">
+          <span className="section-kicker">Skills</span>
+          <h2 className="section-title">Tools I use to build polished products</h2>
+          <p className="section-copy">A practical stack for building responsive frontends, APIs, databases, and deployment-ready full stack applications.</p>
+        </motion.div>
 
-      {/* Skill Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
-        {SkillsInfo.map((category) => (
-          <div
-            key={category.title}
-            className="bg-gray-900 backdrop-blur-md p-6 rounded-2xl border border-white shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
-            style={{
-              backgroundImage:
-                "linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%)",
-              backgroundColor: "#111827",
-              borderRadius: "1rem",
-              border: "1px solid white",
-              boxShadow: "0 0 20px 1px rgba(130, 69, 236, 0.3)",
-              backdropFilter: "blur(8px)",
-            }}
-          >
-            <h3 className="text-xl sm:text-2xl font-semibold text-gray-400 mb-6 text-center">
-              {category.title}
-            </h3>
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {SkillsInfo.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.55, delay: index * 0.08 }}
+              className="glass-card rounded-[1.5rem] p-6 transition duration-300 hover:-translate-y-2 hover:border-violet-400/40"
+            >
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <h3 className="text-2xl font-black text-white">{category.title}</h3>
+                <span className="shrink-0 rounded-full bg-violet-500/15 px-3 py-1 text-xs font-bold text-violet-200">{category.skills.length} skills</span>
+              </div>
 
-            {/* Disable Tilt on Mobile */}
-            {isMobile ? (
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
                 {category.skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center justify-center space-x-2 border border-gray-700 rounded-3xl py-2 px-3"
-                  >
-                    <img
-                      src={skill.logo}
-                      alt={`${skill.name} logo`}
-                      className="w-6 h-6 sm:w-8 sm:h-8"
-                    />
-                    <span className="text-xs sm:text-sm text-gray-300">
-                      {skill.name}
-                    </span>
+                  <div key={skill.name} className="flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/[0.045] p-4 text-center transition duration-300 hover:-translate-y-1 hover:border-violet-400/50 hover:bg-white/[0.08]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/95 p-2 shadow-lg shadow-black/20">
+                      <img src={skill.logo} alt={`${skill.name} logo`} className="h-full w-full object-contain" />
+                    </div>
+                    <span className="text-sm font-extrabold leading-tight text-white">{skill.name}</span>
                   </div>
                 ))}
               </div>
-            ) : (
-              <Tilt
-                tiltMaxAngleX={20}
-                tiltMaxAngleY={20}
-                perspective={1000}
-                scale={1.05}
-                transitionSpeed={1000}
-                gyroscope={true}
-              >
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {category.skills.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className="flex items-center justify-center space-x-2 border border-gray-700 rounded-3xl py-2 px-3"
-                    >
-                      <img
-                        src={skill.logo}
-                        alt={`${skill.name} logo`}
-                        className="w-6 h-6 sm:w-8 sm:h-8"
-                      />
-                      <span className="text-xs sm:text-sm text-gray-300">
-                        {skill.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </Tilt>
-            )}
-          </div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

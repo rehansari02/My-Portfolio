@@ -4,133 +4,48 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
-    <section
-      id="experience"
-      className="py-24 px-[5vw] md:px-[10vw] lg:px-[15vw] font-sans bg-gradient-to-b from-[#0c0116] via-[#0a0119] to-[#090320] text-white overflow-hidden"
-    >
-      {/* Section Title */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-20"
-      >
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-          EXPERIENCE
-        </h2>
-        <div className="w-24 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-6 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)]"></div>
-        <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
-          My professional journey and hands-on experience in building scalable and performant web applications.
-        </p>
-      </motion.div>
+    <section id="experience" className="section-shell overflow-hidden">
+      <div className="section-container">
+        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.6 }} className="mx-auto max-w-3xl text-center">
+          <span className="section-kicker">Experience</span>
+          <h2 className="section-title">Professional journey</h2>
+          <p className="section-copy">Hands-on work building responsive interfaces, APIs, and scalable full stack features with modern JavaScript tools.</p>
+        </motion.div>
 
-      {/* Timeline Container */}
-      <div className="relative max-w-6xl mx-auto">
-        {/* Central Vertical Line (Desktop) */}
-        <motion.div
-          initial={{ scaleY: 0 }}
-          whileInView={{ scaleY: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          style={{ originY: 0 }}
-          className="absolute hidden md:block left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-600 via-pink-500 to-purple-600 shadow-[0_0_10px_rgba(168,85,247,0.3)]"
-        ></motion.div>
-        
-        {/* Left Vertical Line (Mobile) */}
-        <motion.div
-          initial={{ scaleY: 0 }}
-          whileInView={{ scaleY: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          style={{ originY: 0 }}
-          className="absolute md:hidden left-4 w-1 h-full bg-gradient-to-b from-purple-600 to-pink-500"
-        ></motion.div>
-
-        <div className="space-y-12 md:space-y-24">
-          {experiences.map((exp, index) => {
-            const isEven = index % 2 === 0;
-            return (
-              <div
-                key={exp.id}
-                className={`flex flex-col md:flex-row items-center w-full relative ${
-                  isEven ? "md:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Timeline Point (The Dot) */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gray-900 border-4 border-purple-500 z-10 shadow-[0_0_15px_rgba(168,85,247,0.8)]"
-                >
-                  <div className="w-full h-full rounded-full animate-ping bg-purple-400 opacity-20"></div>
-                </motion.div>
-
-                {/* Content Side */}
-                <motion.div
-                  initial={{ opacity: 0, x: isEven ? 80 : -80 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                  className={`w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? "md:pl-16 text-left" : "md:pr-16 md:text-right"}`}
-                >
-                  <div
-                    className="p-6 md:p-8 rounded-3xl border border-white/10 bg-gray-900/40 backdrop-blur-xl shadow-2xl hover:border-purple-500/50 transition-all duration-500 group relative overflow-hidden"
-                  >
-                    {/* Hover Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-pink-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                    <div className={`flex flex-col ${isEven ? "items-start" : "md:items-end items-start"}`}>
-                      {/* Logo & Basic Info */}
-                      <div className={`flex flex-wrap items-center gap-5 mb-4 ${isEven ? "" : "md:flex-row-reverse"}`}>
+        <div className="relative mx-auto mt-16 max-w-5xl">
+          <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-violet-400 via-fuchsia-400 to-transparent md:left-1/2" />
+          <div className="space-y-10 md:space-y-14">
+            {experiences.map((exp, index) => {
+              const right = index % 2 === 0;
+              return (
+                <motion.div key={exp.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.6, delay: index * 0.08 }} className={`relative grid md:grid-cols-2 ${right ? "md:[&>div]:col-start-2" : ""}`}>
+                  <div className={`pl-12 md:pl-0 ${right ? "md:pl-12" : "md:pr-12"}`}>
+                    <span className="absolute left-1.5 top-8 h-5 w-5 rounded-full border-4 border-[#050414] bg-violet-300 shadow-[0_0_30px_rgba(168,85,247,0.75)] md:left-1/2 md:-translate-x-1/2" />
+                    <div className="glass-card group rounded-[1.5rem] p-6 transition duration-300 hover:-translate-y-2 hover:border-violet-400/45">
+                      <div className="flex flex-wrap items-center gap-4">
                         {exp.logo && (
-                          <div className="w-16 h-16 rounded-2xl overflow-hidden border border-purple-500/30 bg-[#0f0f1c] p-2 flex-shrink-0">
-                            <img
-                              src={exp.logo}
-                              alt={exp.company}
-                              className="w-full h-full object-contain rounded-xl"
-                            />
+                          <div className="h-16 w-16 rounded-2xl border border-white/10 bg-white/[0.04] p-2 backdrop-blur">
+                            <img src={exp.logo} alt={exp.company} className="h-full w-full rounded-xl object-contain" />
                           </div>
                         )}
-                        <div className={isEven ? "text-left" : "md:text-right text-left"}>
-                          <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
-                            {exp.role}
-                          </h3>
-                          <p className="text-sm font-medium text-gray-300 mt-1">
-                            {exp.company}
-                          </p>
+                        <div>
+                          <p className="text-xs font-bold uppercase tracking-[0.16em] text-violet-200">{exp.date}</p>
+                          <h3 className="mt-1 text-xl font-black text-white">{exp.role}</h3>
+                          <p className="text-sm font-semibold text-gray-400">{exp.company}</p>
                         </div>
                       </div>
-
-                      {/* Date */}
-                      <div className="flex flex-wrap gap-3 mb-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
-                          {exp.date}
-                        </span>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-sm text-gray-400 leading-relaxed max-w-md mb-4">
-                        {exp.description}
-                      </p>
-                      
-                      {/* Skills */}
-                      <div className={`flex flex-wrap gap-2 mt-2 ${isEven ? "justify-start" : "md:justify-end justify-start"}`}>
-                        {exp.skills.map((skill, i) => (
-                           <span key={i} className="text-xs font-medium text-purple-300 bg-[#251f38] px-2 py-1 rounded-full">
-                             {skill}
-                           </span>
+                      <p className="mt-5 text-sm leading-7 text-gray-300">{exp.description}</p>
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {exp.skills.map((skill) => (
+                          <span key={skill} className="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1 text-xs font-bold text-violet-200">{skill}</span>
                         ))}
                       </div>
                     </div>
                   </div>
                 </motion.div>
-
-                {/* Spacer (Hidden on mobile) */}
-                <div className="hidden md:block md:w-1/2"></div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
@@ -138,3 +53,4 @@ const Experience = () => {
 };
 
 export default Experience;
+
